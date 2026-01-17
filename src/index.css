@@ -1,0 +1,134 @@
+.icon-o {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  color: #002a3d;
+}
+
+.icon-ob {
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  color: #002a3d;
+}
+
+.navbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background-color: #ffff;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.menu-icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.logo {
+  margin-left: auto;
+}
+
+/* SIDEBAR */
+.sidebar {
+  position: fixed;
+  top: 64px; /* BELOW NAVBAR */
+  left: 0;
+  width: 20vw; /* ~20% of screen */
+  height: calc(100vh - 64px);
+  background-color: #ffff;
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  z-index: 50;
+  overflow-y: auto;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+/* Base sidebar links */
+.sidebar a { 
+  text-decoration: none;
+  color: #002a3d;
+  font-weight: 500;
+  font-size: large;
+  height: 50px;
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+  border-radius: 15px;
+  gap: 10px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  position: relative;
+}
+
+/* Hover effect */
+.sidebar li a:hover {
+  background-color: rgba(176, 176, 176, 0.1); /* ash 10% */
+}
+
+/* Active link effect */
+.sidebar li a.active {
+  background-color: #DBEAFE; /* light blue background */
+  color: #2563EB;            /* blue text */
+}
+
+/* Underline for active link */
+.sidebar li a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background-color: #2563EB;
+  border-radius: 2px;
+}
+
+/* PAGE CONTENT */
+.content {
+  margin-top: 64px; /* Account for fixed navbar */
+  min-height: calc(100vh - 64px);
+  width: 100%;
+  position: relative;
+  background-color: #F9FAFB;
+}
+
+.homeContent {
+  background-color: #ffffff;
+  width: 96%;
+  min-height: 120px;              /* better than 30vh */
+  border: 1px solid #e5e7eb;      /* softer border */
+  border-radius: 12px;
+  padding: 16px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;            /* FIX vertical alignment */
+  margin-bottom: 10px;
+}
+
+.downloadbtn:hover {
+  transform: scale(1.05);
+}
+
+.optlist.active{
+  background-color: #DBEAFE;
+  color: #2563EB;
+}
+
+.optlist.hover{
+  background-color: rgba(176, 176, 176, 0.1);
+}
